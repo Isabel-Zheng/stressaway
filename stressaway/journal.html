@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Forum</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower:wght@300;400;600&display=swap" rel="stylesheet">
+  <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://ecdn.teacherspayteachers.com/thumbitem/Chat-icon-illustration-clipart-2-6036893-1600325017/original-6036893-1.jpg"
+    />
+<script>
+      function showAlert() {
+        alert("This is your 30-minute reminder to take a break!");
+      }
+      setInterval(showAlert, 30*60*1000);
+    </script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="https://chatgpt.com/g/g-67f19783f21081919df3646b32a9f7c3-stress-management-buddy" target="_blank">stress management buddy</a>
+    <a href ="break.html">take a break</a>
+    <a href="journal.html">forum</a>
+    <a href="planner.html">planner</a>
+    <a href="index.html">home</a>
+  </div>  
+  <div class="container">
+    <h1>Forum</h1>
+    <h4 style = "font-weight:normal;">
+      You are not alone! Share your experiences with fellow students,
+      read others' testimonies, and offer words of encouragement if you're up for it :)
+       
+    </h4>
+    <textarea style = "height: 20%" id = "nickname" placeholder = "nickname (leave blank to be anonymous)"></textarea>
+    <textarea id="journalEntry" placeholder="write your message here..."></textarea>
+    <button class = "journalButton" id="submitEntry">submit</button>
+    <button class = "journalButton" id = "refresh" style = "float:right;">refresh</button>
+    <div id="entries"></div>
+  </div>
+
+    <script type = "module" src="journal.js"></script>
+</body>
+</html>

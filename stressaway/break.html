@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Take a Break</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://media.istockphoto.com/id/1372597649/vector/breathing-exercise-deep-breath-through-nose-for-benefit-and-good-work-brain-healthy-yoga-and.jpg?s=612x612&w=0&k=20&c=PgxEFIcOTTuHHxRclFmeBzf0lygT836kM_H0u0KFInM="
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      function showAlert() {
+        alert("This is your 30-minute reminder to take a break!");
+      }
+      setInterval(showAlert, 30 * 60 * 1000);
+    </script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a
+        href="https://chatgpt.com/g/g-67f19783f21081919df3646b32a9f7c3-stress-management-buddy"
+        target="_blank"
+        >stress management buddy</a
+      >
+      <a href="break.html">take a break</a>
+      <a href="journal.html">forum</a>
+      <a href="planner.html">planner</a>
+      <a href="index.html">home</a>
+    </div>
+    <div>
+      <h1>Take a Break</h1>
+
+      <div class="quote-box">
+        <p>
+          <i>Sometimes the most productive thing you can do is take a break.</i>
+        </p>
+      </div>
+    </div>
+    <!-- <button id="playBtn">Play Rain</button>
+
+    <!--make me lauhg button and breathing circle-->
+    <!--this is the code for the laugh button--->
+    <style>
+      #joke-setup,
+      #joke-punchline {
+        margin: 20px;
+        font-size: 1.5rem;
+      }
+    </style>
+
+    <div class="columncontainer">
+      <div class="left-column">
+        <h1>Need a laugh?</h1>
+
+        <!-- The button the user clicks to get a joke -->
+        <button onclick="getJoke()">Tell me a joke</button>
+
+        <!-- These two divs will hold the joke setup and punchline -->
+        <div id="joke-setup"></div>
+        <div id="joke-punchline"></div>
+
+        <!-- This is the JavaScript part that makes the button work -->
+        <script>
+          // Define a function called getJoke
+          async function getJoke() {
+            // First, clear out any old joke text
+            document.getElementById("joke-setup").textContent = "";
+            document.getElementById("joke-punchline").textContent = "";
+            try {
+              // Make a GET request to the joke API to get a random joke
+              const response = await fetch(
+                "https://official-joke-api.appspot.com/random_joke"
+              );
+              // Convert the response into a JavaScript object
+              const data = await response.json();
+              // Show the setup of the joke in the "joke-setup" div
+              document.getElementById("joke-setup").textContent = data.setup;
+              // Wait 4 seconds (4000 milliseconds), then show the punchline
+              setTimeout(() => {/*not textContent*/
+                document.getElementById("joke-punchline").innerHTML =
+                  "<i>" + data.punchline + "</i>";
+              }, 4000);
+            } catch (error) {
+              // If something goes wrong, show an error message
+              console.error("Failed to fetch joke:", error);
+              document.getElementById("joke-setup").textContent =
+                "What do you call a website with no jokes?";
+              setTimeout(() => {/*not textContent*/
+                document.getElementById("joke-punchline").innerHTML =
+                  "<i>" + "broken (sorry about that ☹️)" + "</i>";
+              }, 4000);
+            }
+          }
+        </script>
+      </div>
+      
+      <div class="right-column">
+        <style>
+          .circle {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #90f7ec, #32ccbc);
+            animation: breathe 8s ease-in-out infinite;
+          }
+
+          @keyframes breathe {
+            0% {
+              transform: scale(1);
+              opacity: 0.9;
+            }
+            50% {
+              transform: scale(1.5);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 0.9;
+            }
+          }
+
+          .text {
+            font-size: 2rem;
+            animation: textCycle 8s ease-in-out infinite;
+          }
+
+          @keyframes textCycle {
+            0% {
+              content: "Breathe Out";
+            }
+            50% {
+              content: "Breathe In";
+            }
+            100% {
+              content: "Breathe Out";
+            }
+          }
+        </style>
+
+        <div class="text-align:center;">
+          <div class="circle"></div>
+          <br>
+          <div class="" id="breathText">
+            <h3 style = "font-family:indie flower;">Breathe with the circle. When it expands, breathe in; as it contracts, breathe out!</h3>
+          </div>
+        </div>
+<!--
+        <script>
+          const text = document.getElementById("breathText");
+          const states = ["Breathe In", "Breathe Out"];
+          let i = 0;
+
+          setInterval(() => {
+            text.textContent = states[i % states.length];
+            i++;
+          }, 4000); // Cycle every 2s for a total of 8s loop
+        </script>
+        
+        -->
+      </div>
+      <br />
+    </div>
+
+    <div class="columncontainer">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/inpok4MKVLM?si=A2sm7duryJFEN--R"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/NQYR55EiKvs?si=C6bUwLMrNAlD23_Y"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    
+    <h1>More Ways to Take a Break</h1>
+    <ul>
+      <li>Take a walk</li>
+      <li>Take a nap</li>
+      <li>Listen to your favorite music</li>
+      <li>Spend time with your loved ones</li>
+      <li>Smile :)</li>
+    </ul>
+  </body>
+</html>
